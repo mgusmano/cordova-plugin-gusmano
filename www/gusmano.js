@@ -8,47 +8,47 @@ var cordova = require('cordova'),
 
 //alert('in3plugin2');
     
-var Echo = function() {
+var Gusmano = function() {
     this.echo = 'hi';
     
     this.createEcho = function(valToEcho, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, 
-            'Echo', 'createEcho', [ { "echoVal": valToEcho } ]
+            'Gusmano', 'createEcho', [ { "echoVal": valToEcho } ]
         ); 
     };
 
     this.sendNotification = function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback,
-            'Echo', 'sendNotification', [ { } ]
+            'Gusmano', 'sendNotification', [ { } ]
         );
     };
 
     this.sayHi = function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback,
-            'Echo', 'sayHi', [ { } ]
+            'Gusmano', 'sayHi', [ { } ]
         );
     };
 
     this.showSplash = function (successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback,
-            'Echo', 'showSplash', [{}]
+            'Gusmano', 'showSplash', [{}]
         );
     }
 
     this.sendSMS = function (phoneNumber, message, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback,
-            'Echo', 'sendSMS', [{ "phoneNumber": phoneNumber, "message": message }]
+            'Gusmano', 'sendSMS', [{ "phoneNumber": phoneNumber, "message": message }]
         );
     };
 
     this.makeCall = function (phoneNumber, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback,
-            'Echo', 'makeCall', [{ "phoneNumber": phoneNumber }]
+            'Gusmano', 'makeCall', [{ "phoneNumber": phoneNumber }]
         );
     };
 
 };
 
-var echo = new Echo();
+var gusmano = new Gusmano();
 
-module.exports = echo;
+module.exports = gusmano;
